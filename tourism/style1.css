@@ -1,0 +1,7 @@
+.bg-container{
+    background-image: url("https://ik.imagekit.io/ub0g8ffns/MERN/taj-mahal?updatedAt=1741343830395");
+    height: 600px;
+    width: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

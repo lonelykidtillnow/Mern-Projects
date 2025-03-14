@@ -1,0 +1,5 @@
+.bgimg{
+    background-image: url("https://ik.imagekit.io/ub0g8ffns/MERN/foodmunch-banner-bg.png");
+    height: 620px;
+    background-size: cover;
+}
