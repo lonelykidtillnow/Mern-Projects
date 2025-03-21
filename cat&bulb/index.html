@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cat & bulb</title>
+
+    <!--tailwind css-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body class="bg-[black]">
+    <div class="flex flex-col justify-center items-center gap-5">
+        <!--bulb-->
+        <img src="https://ik.imagekit.io/ub0g8ffns/MERN/bulb-go-off-img.png" alt="bulb" class="h-[200px]" id="bulb">
+        <!--cat-->
+        <img src="https://ik.imagekit.io/ub0g8ffns/MERN/cat-eyes-img.png" alt="cat" class="h-[300px]" id="cat">
+        <div class="bg-[#7b8794] rounded-lg text-[white] w-[300px] space-y-4 py-[10px]">
+            <p class="font-[poppins] text-[24px] font-[500] text-center" id="p">Switched Off</p>
+            <div class="flex flex-row justify-around">
+                <button class="bg-red-500 font-[poppins] text-[24px] font-[500] py-[5px] px-[15px] border-[black] border-[1px] rounded-lg" id="btoff">Off</button>
+                <button class="bg-green-500 font-[poppins] text-[24px] font-[500] py-[5px] px-[15px] border-[black] border-[1px] rounded-lg" id="bton">ON</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var bulb=document.getElementById("bulb");
+        var cat=document.getElementById("cat");
+        var p=document.getElementById("p");
+        var btoff=document.getElementById("btoff");
+        var bton=document.getElementById("bton");
+
+        bton.addEventListener("click",()=>{
+            bulb.src="https://ik.imagekit.io/ub0g8ffns/MERN/bulb-go-on-img.png";
+            cat.src="https://ik.imagekit.io/ub0g8ffns/MERN/cat-img.png";
+            p.textContent="Switched On";
+            bton.style.backgroundColor="#cbd2d9";
+            btoff.style.backgroundColor="red";
+        })
+
+        btoff.addEventListener("click",()=>{
+            bulb.src="https://ik.imagekit.io/ub0g8ffns/MERN/bulb-go-off-img.png";
+            cat.src="https://ik.imagekit.io/ub0g8ffns/MERN/cat-eyes-img.png";
+            p.textContent="Switched Off";
+            btoff.style.backgroundColor="#cbd2d9";
+            bton.style.backgroundColor="green";
+        })
+    </script>
+</body>
+</html>
