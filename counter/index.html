@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>countert</title>
+
+    <!--tailwind css-->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="h-[100vh] flex flex-col items-center justify-center gap-4">
+        <h3 class= "font-[500] text-[38px]">Counter</h3>
+        <p id="0" class="text-[32px]">0</p>
+        <div class="flex flex-row gap-5">
+            <button id="bt+" class="bg-[#e3eaf1] px-[10px] text-[28px] rounded-md">+</button>
+            <button id="btreset" class="bg-[#e3eaf1] px-[10px] text-[24px] rounded-md">Reset</button>
+            <button id="bt-" class="bg-[#e3eaf1] px-[10px] text-[24px] rounded-md">-</button>
+        </div>
+    </div>
+
+    <script>
+        var a=document.getElementById("0");
+        var plus=document.getElementById("bt+");
+        var minus=document.getElementById("bt-");
+        var reset=document.getElementById("btreset");
+        
+        plus.addEventListener("click",()=>{
+            a.textContent=parseInt(a.textContent)+1;
+        })
+
+        minus.addEventListener("click",()=>{
+            a.textContent=parseInt(a.textContent)-1;
+        })
+
+        reset.addEventListener("click",()=>{
+            a.textContent=0;    //or  parseInt(a.textContent=0);
+        })
+    </script>
+</body>
+</html>

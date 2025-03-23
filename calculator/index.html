@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+
+    <!--tailwind css-->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="h-[100vh] flex flex-col items-center justify-center gap-2">
+        <h1 class="font-[500] text-[38px]">Calculator</h1>
+        <input type="number" placeholder="enter a number1" id="a" class="border-[black] border-[1px]">
+        <input type="number" placeholder="enter a number2" id="b" class="border-[black] border-[1px]">
+        <p class="font-[500] text-[25px]">
+            Result:<p id="c" class="font-[500] text-[28px] text-[red]"></p></p>
+        <div>
+            <button id="add" class="bg-[#e3eaf1] px-[10px] text-[20px] rounded-md">ADD</button>
+            <button id="-" class="bg-[#e3eaf1] px-[10px] text-[20px] rounded-md">SUB</button>
+            <button id="*" class="bg-[#e3eaf1] px-[10px] text-[20px] rounded-md">MULTIPLY</button>
+            <button id="/" class="bg-[#e3eaf1] px-[10px] text-[20px] rounded-md">DIVIDE</button>
+            <button id="%" class="bg-[#e3eaf1] px-[10px] text-[20px] rounded-md">MODUlUS</button>
+        </div>
+    </div>
+
+    <script>
+        var c=document.getElementById("c");
+        var btn=document.querySelectorAll("button");
+
+        btn.forEach((x)=>{
+            x.addEventListener("click",()=>{
+                var a=parseInt(document.getElementById("a").value);
+                var b=Number(document.getElementById("b").value);
+                if(x.id=="add"){
+                    c.textContent=a+b;
+                }
+                else if(x.id=="-"){
+                    c.textContent=a-b;
+                }
+                else if(x.id=="*"){
+                    c.textContent=a*b;
+                }
+                else if(x.id=="/"){
+                    c.textContent= b!=0 ? a/b : "can't divide by 0";
+                }
+                else{
+                    c.textContent= b!=0 ? a%b : "can't divide by 0";
+                }
+            })
+        })
+    </script>
+</body>
+</html>
